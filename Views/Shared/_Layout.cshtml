@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title -Developer Recommendation</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.1" />
+    <meta name="Developer Recommendation" content="Purchase your favourite football club jerseys,with affordability and ease." />
+    <meta name="keywords" content="Football, Football Club, Jerseys" />
+    <meta name="author" content="Developer Recommendation" />
+    <meta http-equiv="refresh" content="30" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+
+<body>
+    <nav class="navbar navbar-inverse nav-justified">
+        <nav class="navbar-header">
+            <nav class="container-fluid">
+                <nav class="collapse navbar-collapse">
+                    <div class="col-md-4">
+                        <img class="img-responsive pull-left nav-justified" src="https://github.com/Renegade-React-Dev-Team/ui-assessment/blob/main/assets/icons/png/globe.png" alt="Language Prefrence" />
+                        <div class="col-md-4 nav-justified">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                    <li role="presentation"><a class="menu-item active" href="uk#" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="-1"><span class="flag-icon flag-icon-uk">EN</span></a></li>
+                                    <li role="presentation"><a class="menu-item active" href="#fr" tabindex="-1"><span class="flag-icon flag-icon-fr">French</span></a></li>
+                                    <li role="presentation"><a class="menu-item active" href="#it" tabindex="-1"><span class="flag-icon flag-icon-it">Italian</span></a></li>
+                                    <li role="presentation"><a class="menu-item active" href="#ru" tabindex="-1"><span class="flag-icon flag-icon-ru">Russian</span></a></li>
+                                </ul>
+                                /*Modify navbar-header colour*/
+                                <style>
+                                    .col-md-4-navbar-header-pull-left {
+                                        background-color: dimgrey;
+                                        background-size: contain;
+                                        background-position: left;
+                                    }
+                                </style>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navbar-text">
+                        <div class="col-md-pull-6">
+                            <p class="navbar-text text-center-align" data-show="true">SALES BEGIN . FREE SHIPPING ON ALL ORDERS</p>
+                            <p style="color:white; font-size:large; font-size-adjust:unset; font-weight:200"></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-pull-8">
+                        <a href="https://camiestas-futbol.effectstudios.co/api/v1/banner" class="btn btn-success" type="text/html" role="banner">
+                            <img class="img-responsive nav-justified" src="https://github.com/Renegade-React-Dev-Team/ui-assessment/blob/main/assets/icons/png/whatsapp.png" alt="Chat with us" /><span class="caret"></span>
+                        </a>
+                    </div>
+                </nav>
+            </nav>
+        </nav>
+    </nav>
+
+
+    <nav class="navbar navbar-default nav-justified">
+        /*Modify navbar colour*/
+        <style>
+            .navbar-custom {
+                background-color: white;
+            }
+        </style>
+        <nav class="navbar-header">
+            <nav class="container-fluid">
+                <nav class="collapse navbar-collapse">
+                    <div class="glyphicon-list">
+                        <div class="glyphicon-align-justify">
+                            <button class="btn btn-default glyphicon-align-justify-toggle" type="button"><span class="caret"></span></button>
+                            <ul class="glyphicon-menu-left" role="menu" aria-labelledby="menu2">
+                                <li style="font-display:unset; font-family:Calibri; font-size:large; font-size-adjust:unset; font-weight:200"></li>
+                                <li role="presentation" class="Home"><a class="menu-item active" href="#" tabindex="-1">Home</a></li>
+                                <li role="presentation" class="T-shirts"><a class="menu-item active" href="#" tabindex="-1">T-shirts</a></li>
+                                <li role="presentation" class="NBA"><a class="menu-item active" href="#" tabindex="-1">NBA</a></li>
+                                <li role="presentation" class="Tracksuits"><a class="menu-item active" href="#" tabindex="-1">Tracksuits</a></li>
+                                <li role="presentation" class="Products Delivery . 1-2 days"><a class="menu-item active" href="#" tabindex="-1">Products Delivery . 1-2 days"</a></li>
+                                <li role="presentation" class="Contact"><a class="menu-item active" href="#" tabindex="-1">Contact</a></li>
+                                <li role="presentation" class="Reviews"><a class="menu-item active" href="#" tabindex="-1">Reviews</a></li>
+                                <li a class="nav-link glyphicon-align-justify-toggle" href="#" id="glyhicon-list" aria-haspopup="true" aria-expanded="false"><span></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="glyphicon glyphicon-search col-md-push-20">
+                        <div class="glyphicon glyphicon-shopping-cart col-md-push-20">
+                            <div class="glyphicon glyphicon-user col-md-push-20">
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </nav>
+        </nav>
+    </nav>
+
+ @Html.Partial("_LoginPartial")
+
+
+    <div class="container body-content">
+        @RenderBody()
+        @RenderSection("SPAViews", required: false)
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Developer Recommendation</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("Scripts", required: false)
+
+    <script>
+        function getData() {
+            const response = await fetch('https://camiestas-futbol.effectstudios.co/api')
+            const data = await response.json()
+        }
+        // Begin accessing JSON data here
+        var data = JSON.parse(this.response)
+        if (request.status >= 200 && request.status < 400) {
+            data.forEach(element => {
+                console.log(element.getData)
+            })
+        } else {
+            console.log('error')
+        }
+        function getData() {
+            const response = fetch('https://camiestas-futbol.effectstudios.co/api/docs')
+            const data = fetchresponse.json()
+        }
+        document.getElementById("Btn,Link").addEventListener("click", function () {
+            myFunction(VRDisplayEvent);
+        });
+        request.send();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://camiestas-futbol.effectstudios.co/api"></script>
+    <script src="https://camiestas-futbol.effectstudios.co/api/docs"></script>
+</body>
+</html>
